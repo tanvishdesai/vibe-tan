@@ -1,0 +1,1580 @@
+{
+  "modelConfig": {
+    "runtime": "tfjs",
+    "modelType": "full",
+    "maxFaces": 10
+  },
+  "frameCount": 426,
+  "overallAccuracy": 0.6150234741784038,
+  "overallConfusion": {
+    "NO_FACE": {
+      "NO_FACE": 43,
+      "OK": 1,
+      "MULTIPLE_FACES": 0
+    },
+    "OK": {
+      "NO_FACE": 125,
+      "OK": 177,
+      "MULTIPLE_FACES": 7
+    },
+    "MULTIPLE_FACES": {
+      "NO_FACE": 13,
+      "OK": 18,
+      "MULTIPLE_FACES": 42
+    }
+  },
+  "noFaceMetrics": {
+    "tp": 43,
+    "fp": 138,
+    "fn": 1,
+    "tn": 244,
+    "precision": 0.23756906077348067,
+    "recall": 0.9772727272727273,
+    "f1": 0.38222222222222224
+  },
+  "multiFaceMetrics": {
+    "tp": 42,
+    "fp": 7,
+    "fn": 31,
+    "tn": 346,
+    "precision": 0.8571428571428571,
+    "recall": 0.5753424657534246,
+    "f1": 0.6885245901639344
+  },
+  "sourceBreakdown": {
+    "WIDER_FACE / mask dataset": {
+      "frameCount": 272,
+      "accuracy": 0.6433823529411765,
+      "noFace": {
+        "tp": 39,
+        "fp": 75,
+        "fn": 1,
+        "tn": 157,
+        "precision": 0.34210526315789475,
+        "recall": 0.975,
+        "f1": 0.5064935064935064
+      },
+      "multipleFaces": {
+        "tp": 32,
+        "fp": 7,
+        "fn": 23,
+        "tn": 210,
+        "precision": 0.8205128205128205,
+        "recall": 0.5818181818181818,
+        "f1": 0.6808510638297872
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 39,
+          "OK": 1,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 66,
+          "OK": 104,
+          "MULTIPLE_FACES": 7
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 9,
+          "OK": 14,
+          "MULTIPLE_FACES": 32
+        }
+      }
+    },
+    "OEP (real exam webcam)": {
+      "frameCount": 154,
+      "accuracy": 0.564935064935065,
+      "noFace": {
+        "tp": 4,
+        "fp": 63,
+        "fn": 0,
+        "tn": 87,
+        "precision": 0.05970149253731343,
+        "recall": 1,
+        "f1": 0.11267605633802817
+      },
+      "multipleFaces": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 8,
+        "tn": 136,
+        "precision": 1,
+        "recall": 0.5555555555555556,
+        "f1": 0.7142857142857143
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 4,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 59,
+          "OK": 73,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 4,
+          "OK": 4,
+          "MULTIPLE_FACES": 10
+        }
+      }
+    }
+  },
+  "conditionBreakdown": {
+    "normal": {
+      "frameCount": 105,
+      "accuracy": 0.8571428571428571,
+      "noFace": {
+        "tp": 0,
+        "fp": 12,
+        "fn": 0,
+        "tn": 93,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 102,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 12,
+          "OK": 90,
+          "MULTIPLE_FACES": 3
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "peer_present": {
+      "frameCount": 73,
+      "accuracy": 0.5753424657534246,
+      "noFace": {
+        "tp": 0,
+        "fp": 13,
+        "fn": 0,
+        "tn": 60,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 31,
+        "tn": 0,
+        "precision": 1,
+        "recall": 0.5753424657534246,
+        "f1": 0.7304347826086955
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 13,
+          "OK": 18,
+          "MULTIPLE_FACES": 42
+        }
+      }
+    },
+    "occlusion": {
+      "frameCount": 32,
+      "accuracy": 0.34375,
+      "noFace": {
+        "tp": 0,
+        "fp": 21,
+        "fn": 0,
+        "tn": 11,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 32,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 21,
+          "OK": 11,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "partial_occlusion": {
+      "frameCount": 15,
+      "accuracy": 0.3333333333333333,
+      "noFace": {
+        "tp": 0,
+        "fp": 9,
+        "fn": 0,
+        "tn": 6,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 14,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 9,
+          "OK": 5,
+          "MULTIPLE_FACES": 1
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "angle": {
+      "frameCount": 36,
+      "accuracy": 0.4444444444444444,
+      "noFace": {
+        "tp": 0,
+        "fp": 20,
+        "fn": 0,
+        "tn": 16,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 36,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 20,
+          "OK": 16,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "lighting": {
+      "frameCount": 20,
+      "accuracy": 0.75,
+      "noFace": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 17,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "tn": 18,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 3,
+          "OK": 15,
+          "MULTIPLE_FACES": 2
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "blur": {
+      "frameCount": 12,
+      "accuracy": 0.25,
+      "noFace": {
+        "tp": 0,
+        "fp": 8,
+        "fn": 0,
+        "tn": 4,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 11,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 8,
+          "OK": 3,
+          "MULTIPLE_FACES": 1
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "background_crop": {
+      "frameCount": 40,
+      "accuracy": 0.975,
+      "noFace": {
+        "tp": 39,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "precision": 1,
+        "recall": 0.975,
+        "f1": 0.9873417721518987
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 40,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 39,
+          "OK": 1,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "mask": {
+      "frameCount": 20,
+      "accuracy": 0.1,
+      "noFace": {
+        "tp": 0,
+        "fp": 18,
+        "fn": 0,
+        "tn": 2,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 20,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 18,
+          "OK": 2,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "absent": {
+      "frameCount": 4,
+      "accuracy": 1,
+      "noFace": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 4,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "occlusion;angle": {
+      "frameCount": 19,
+      "accuracy": 0,
+      "noFace": {
+        "tp": 0,
+        "fp": 19,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 19,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 19,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    },
+    "glasses": {
+      "frameCount": 50,
+      "accuracy": 0.7,
+      "noFace": {
+        "tp": 0,
+        "fp": 15,
+        "fn": 0,
+        "tn": 35,
+        "precision": 0,
+        "recall": null,
+        "f1": null
+      },
+      "multipleFaces": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "confusion": {
+        "NO_FACE": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        },
+        "OK": {
+          "NO_FACE": 15,
+          "OK": 35,
+          "MULTIPLE_FACES": 0
+        },
+        "MULTIPLE_FACES": {
+          "NO_FACE": 0,
+          "OK": 0,
+          "MULTIPLE_FACES": 0
+        }
+      }
+    }
+  },
+  "misclassified": [
+    {
+      "frame_id": "wf_0013.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (8)"
+    },
+    {
+      "frame_id": "wf_0025.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (2)"
+    },
+    {
+      "frame_id": "wf_0030.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0036.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (10)"
+    },
+    {
+      "frame_id": "wf_0057.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0063.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0072.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0074.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0077.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0078.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0081.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0082.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (4)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0083.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (4)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0086.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0089.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0091.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0092.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (4)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0094.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0095.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0099.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (4)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0104.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0105.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0111.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0112.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0113.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0115.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0116.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0122.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (3)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "wf_0124.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (4)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0126.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0127.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0132.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0133.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0135.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0136.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0137.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0139.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0140.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0141.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0143.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0144.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0145.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0146.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0148.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0151.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0152.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0153.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0155.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0156.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0157.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0159.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (2)"
+    },
+    {
+      "frame_id": "wf_0160.jpg",
+      "condition_tags": "partial_occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0162.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0163.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0166.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0167.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0168.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0170.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0172.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0173.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0176.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0177.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0178.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0180.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0181.jpg",
+      "condition_tags": "lighting",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (4)"
+    },
+    {
+      "frame_id": "wf_0182.jpg",
+      "condition_tags": "lighting",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (3)"
+    },
+    {
+      "frame_id": "wf_0184.jpg",
+      "condition_tags": "lighting",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0189.jpg",
+      "condition_tags": "lighting",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0193.jpg",
+      "condition_tags": "lighting",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0201.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0202.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "MULTIPLE_FACES (3)"
+    },
+    {
+      "frame_id": "wf_0203.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0205.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0206.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0208.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0209.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0210.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "wf_0212.jpg",
+      "condition_tags": "blur",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "neg_0035.jpg",
+      "condition_tags": "background_crop",
+      "groundTruth": "NO_FACE (0)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "mask_0001.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0002.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0003.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0004.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0005.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0006.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0007.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0008.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0009.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0011.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0012.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0013.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0014.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0016.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0017.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0018.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0019.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "mask_0020.jpg",
+      "condition_tags": "mask",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00054s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00064s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00076s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00089s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00099s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00104s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject10_00146s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00034s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00099s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00203s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00312s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00401s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00513s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00570s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject11_00657s.jpg",
+      "condition_tags": "angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00166s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00188s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00195s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00213s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00215s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00305s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject13_00307s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject13_00317s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject13_00518s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject15_00798s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00461s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00766s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00771s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00808s.jpg",
+      "condition_tags": "occlusion",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00317s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00404s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00409s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00429s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00481s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00734s.jpg",
+      "condition_tags": "occlusion;angle",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject15_00002s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "oep_subject15_00855s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "oep_subject18_00166s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00208s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "oep_subject19_00243s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00292s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "OK (1)"
+    },
+    {
+      "frame_id": "oep_subject19_00312s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00352s.jpg",
+      "condition_tags": "peer_present",
+      "groundTruth": "MULTIPLE_FACES (2)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00788s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject13_00391s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject13_00468s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject13_00582s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject14_00220s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject16_00508s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00034s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00054s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00086s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00153s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00411s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00486s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00540s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00627s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject19_00704s.jpg",
+      "condition_tags": "glasses",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00205s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00334s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00453s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject12_00691s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00101s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00339s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00587s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00716s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    },
+    {
+      "frame_id": "oep_subject18_00825s.jpg",
+      "condition_tags": "normal",
+      "groundTruth": "OK (1)",
+      "predicted": "NO_FACE (0)"
+    }
+  ]
+}

@@ -1,11 +1,17 @@
 import {
+  IsArray,
   IsEmail,
   IsEnum,
+  IsInt,
   IsMongoId,
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsString,
+  Max,
+  Min,
 } from 'class-validator';
+import {Transform, Type} from 'class-transformer';
 import {JSONSchema} from 'class-validator-jsonschema';
 // Import directly from the defining transformer rather than the module barrel
 // to avoid a circular dependency (the barrel re-exports controllers that pull
@@ -61,6 +67,38 @@ export class NewAnomalyData {
   @IsMongoId()
   @IsString()
   cohortId?: string | ObjectId;
+
+  @JSONSchema({
+    description: 'Number of faces detected by the model at capture time',
+    type: 'integer',
+    example: 1,
+  })
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  faceCount?: number;
+
+  @JSONSchema({
+    description:
+      'Per-face detection confidence (0-1) reported by the face detection model, one entry per detected face. Sent as a JSON-encoded array string in multipart requests.',
+    type: 'array',
+    items: {type: 'number'},
+  })
+  @IsOptional()
+  @Transform(({value}) => {
+    if (typeof value !== 'string') return value;
+    try {
+      return JSON.parse(value);
+    } catch {
+      return value;
+    }
+  })
+  @IsArray()
+  @IsNumber({}, {each: true})
+  @Min(0, {each: true})
+  @Max(1, {each: true})
+  confidenceScores?: number[];
 }
 
 export class AnomalyData extends NewAnomalyData implements IAnomalyData {

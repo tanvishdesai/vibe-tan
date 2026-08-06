@@ -57,6 +57,8 @@ export class IAnomalyData {
   createdAt: Date;
   cohortId?: string | ObjectId;
   cohortName?: string;
+  faceCount?: number;
+  confidenceScores?: number[];
 
   constructor(data: Partial<IAnomalyData>, userId: string) {
     this.userId = new ObjectId(userId);
@@ -67,6 +69,12 @@ export class IAnomalyData {
     this.createdAt = new Date();
     if (data.cohortId) {
       this.cohortId = new ObjectId(data.cohortId);
+    }
+    if (data.faceCount !== undefined) {
+      this.faceCount = data.faceCount;
+    }
+    if (data.confidenceScores !== undefined) {
+      this.confidenceScores = data.confidenceScores;
     }
   }
 }

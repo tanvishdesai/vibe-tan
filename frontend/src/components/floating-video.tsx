@@ -328,6 +328,12 @@ const lastCalledRef = useRef<number>(0);
               courseId: courseStore.currentCourse?.courseId || "",
               versionId: courseStore.currentCourse?.versionId || "",
               itemId: courseStore.currentCourse?.itemId || "",
+              // Persist the detected face count for offline accuracy evaluation
+              // instead of discarding it (see face-count accuracy eval, issue #1222).
+              // Per-face confidence is intentionally not sent: @tensorflow-models/face-detection's
+              // MediaPipeFaceDetector Face type (both "tfjs" and "mediapipe" runtimes) only
+              // exposes `box` and `keypoints`, no score. See eval REPORT.md for detail.
+              faceCount: facesCount,
             },
             file: imageFile,
           });

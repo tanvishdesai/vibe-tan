@@ -1,0 +1,427 @@
+frame_id,ground_truth_face_count,condition_tags,source_dataset,source_image,license
+wf_0001.jpg,1,normal,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_767.jpg,CC-BY-NC-ND-4.0
+wf_0002.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_542.jpg,CC-BY-NC-ND-4.0
+wf_0003.jpg,1,normal,WIDER_FACE_val,29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_900.jpg,CC-BY-NC-ND-4.0
+wf_0004.jpg,1,normal,WIDER_FACE_val,47--Matador_Bullfighter/47_Matador_Bullfighter_matadorbullfighting_47_936.jpg,CC-BY-NC-ND-4.0
+wf_0005.jpg,1,normal,WIDER_FACE_val,16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_495.jpg,CC-BY-NC-ND-4.0
+wf_0006.jpg,1,normal,WIDER_FACE_val,23--Shoppers/23_Shoppers_Shoppers_23_854.jpg,CC-BY-NC-ND-4.0
+wf_0007.jpg,1,normal,WIDER_FACE_val,52--Photographers/52_Photographers_photographertakingphoto_52_721.jpg,CC-BY-NC-ND-4.0
+wf_0008.jpg,1,normal,WIDER_FACE_val,45--Balloonist/45_Balloonist_Balloonist_45_186.jpg,CC-BY-NC-ND-4.0
+wf_0009.jpg,1,normal,WIDER_FACE_val,16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_467.jpg,CC-BY-NC-ND-4.0
+wf_0010.jpg,1,normal,WIDER_FACE_val,11--Meeting/11_Meeting_Meeting_11_Meeting_Meeting_11_865.jpg,CC-BY-NC-ND-4.0
+wf_0011.jpg,1,normal,WIDER_FACE_val,41--Swimming/41_Swimming_Swimmer_41_976.jpg,CC-BY-NC-ND-4.0
+wf_0012.jpg,1,normal,WIDER_FACE_val,53--Raid/53_Raid_policeraid_53_597.jpg,CC-BY-NC-ND-4.0
+wf_0013.jpg,1,normal,WIDER_FACE_val,12--Group/12_Group_Large_Group_12_Group_Large_Group_12_196.jpg,CC-BY-NC-ND-4.0
+wf_0014.jpg,1,normal,WIDER_FACE_val,1--Handshaking/1_Handshaking_Handshaking_1_567.jpg,CC-BY-NC-ND-4.0
+wf_0015.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_852.jpg,CC-BY-NC-ND-4.0
+wf_0016.jpg,1,normal,WIDER_FACE_val,57--Angler/57_Angler_peoplefishing_57_900.jpg,CC-BY-NC-ND-4.0
+wf_0017.jpg,1,normal,WIDER_FACE_val,24--Soldier_Firing/24_Soldier_Firing_Soldier_Firing_24_824.jpg,CC-BY-NC-ND-4.0
+wf_0018.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_74.jpg,CC-BY-NC-ND-4.0
+wf_0019.jpg,1,normal,WIDER_FACE_val,15--Stock_Market/15_Stock_Market_Stock_Market_15_102.jpg,CC-BY-NC-ND-4.0
+wf_0020.jpg,1,normal,WIDER_FACE_val,35--Basketball/35_Basketball_playingbasketball_35_730.jpg,CC-BY-NC-ND-4.0
+wf_0021.jpg,1,normal,WIDER_FACE_val,61--Street_Battle/61_Street_Battle_streetfight_61_703.jpg,CC-BY-NC-ND-4.0
+wf_0022.jpg,1,normal,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_iceskiing_39_819.jpg,CC-BY-NC-ND-4.0
+wf_0023.jpg,1,normal,WIDER_FACE_val,16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_134.jpg,CC-BY-NC-ND-4.0
+wf_0024.jpg,1,normal,WIDER_FACE_val,30--Surgeons/30_Surgeons_Surgeons_30_533.jpg,CC-BY-NC-ND-4.0
+wf_0025.jpg,1,normal,WIDER_FACE_val,50--Celebration_Or_Party/50_Celebration_Or_Party_houseparty_50_432.jpg,CC-BY-NC-ND-4.0
+wf_0026.jpg,1,normal,WIDER_FACE_val,38--Tennis/38_Tennis_Tennis_38_230.jpg,CC-BY-NC-ND-4.0
+wf_0027.jpg,1,normal,WIDER_FACE_val,52--Photographers/52_Photographers_photographertakingphoto_52_815.jpg,CC-BY-NC-ND-4.0
+wf_0028.jpg,1,normal,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_930.jpg,CC-BY-NC-ND-4.0
+wf_0029.jpg,1,normal,WIDER_FACE_val,43--Row_Boat/43_Row_Boat_Canoe_43_1047.jpg,CC-BY-NC-ND-4.0
+wf_0030.jpg,1,normal,WIDER_FACE_val,52--Photographers/52_Photographers_taketouristphotos_52_659.jpg,CC-BY-NC-ND-4.0
+wf_0031.jpg,1,normal,WIDER_FACE_val,31--Waiter_Waitress/31_Waiter_Waitress_Waiter_Waitress_31_847.jpg,CC-BY-NC-ND-4.0
+wf_0032.jpg,1,normal,WIDER_FACE_val,17--Ceremony/17_Ceremony_Ceremony_17_1037.jpg,CC-BY-NC-ND-4.0
+wf_0033.jpg,1,normal,WIDER_FACE_val,50--Celebration_Or_Party/50_Celebration_Or_Party_birthdayparty_50_75.jpg,CC-BY-NC-ND-4.0
+wf_0034.jpg,1,normal,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_658.jpg,CC-BY-NC-ND-4.0
+wf_0035.jpg,1,normal,WIDER_FACE_val,51--Dresses/51_Dresses_wearingdress_51_348.jpg,CC-BY-NC-ND-4.0
+wf_0036.jpg,1,normal,WIDER_FACE_val,4--Dancing/4_Dancing_Dancing_4_489.jpg,CC-BY-NC-ND-4.0
+wf_0037.jpg,1,normal,WIDER_FACE_val,41--Swimming/41_Swimming_Swimming_41_714.jpg,CC-BY-NC-ND-4.0
+wf_0038.jpg,1,normal,WIDER_FACE_val,4--Dancing/4_Dancing_Dancing_4_885.jpg,CC-BY-NC-ND-4.0
+wf_0039.jpg,1,normal,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_723.jpg,CC-BY-NC-ND-4.0
+wf_0040.jpg,1,normal,WIDER_FACE_val,25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_993.jpg,CC-BY-NC-ND-4.0
+wf_0041.jpg,1,normal,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_494.jpg,CC-BY-NC-ND-4.0
+wf_0042.jpg,1,normal,WIDER_FACE_val,56--Voter/56_Voter_peoplevoting_56_378.jpg,CC-BY-NC-ND-4.0
+wf_0043.jpg,1,normal,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_Ice_Skating_39_486.jpg,CC-BY-NC-ND-4.0
+wf_0044.jpg,1,normal,WIDER_FACE_val,16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_226.jpg,CC-BY-NC-ND-4.0
+wf_0045.jpg,1,normal,WIDER_FACE_val,55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_343.jpg,CC-BY-NC-ND-4.0
+wf_0046.jpg,1,normal,WIDER_FACE_val,16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_447.jpg,CC-BY-NC-ND-4.0
+wf_0047.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_Sequences_13_807.jpg,CC-BY-NC-ND-4.0
+wf_0048.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_940.jpg,CC-BY-NC-ND-4.0
+wf_0049.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_512.jpg,CC-BY-NC-ND-4.0
+wf_0050.jpg,1,normal,WIDER_FACE_val,48--Parachutist_Paratrooper/48_Parachutist_Paratrooper_Parachutist_Paratrooper_48_205.jpg,CC-BY-NC-ND-4.0
+wf_0051.jpg,1,normal,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_44.jpg,CC-BY-NC-ND-4.0
+wf_0052.jpg,1,normal,WIDER_FACE_val,40--Gymnastics/40_Gymnastics_Gymnastics_40_171.jpg,CC-BY-NC-ND-4.0
+wf_0053.jpg,1,normal,WIDER_FACE_val,40--Gymnastics/40_Gymnastics_Gymnastics_40_389.jpg,CC-BY-NC-ND-4.0
+wf_0054.jpg,1,normal,WIDER_FACE_val,53--Raid/53_Raid_policeraid_53_438.jpg,CC-BY-NC-ND-4.0
+wf_0055.jpg,1,normal,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_129.jpg,CC-BY-NC-ND-4.0
+wf_0056.jpg,1,normal,WIDER_FACE_val,2--Demonstration/2_Demonstration_Demonstrators_2_41.jpg,CC-BY-NC-ND-4.0
+wf_0057.jpg,1,normal,WIDER_FACE_val,24--Soldier_Firing/24_Soldier_Firing_Soldier_Firing_24_372.jpg,CC-BY-NC-ND-4.0
+wf_0058.jpg,1,normal,WIDER_FACE_val,44--Aerobics/44_Aerobics_Aerobics_44_1032.jpg,CC-BY-NC-ND-4.0
+wf_0059.jpg,1,normal,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_357.jpg,CC-BY-NC-ND-4.0
+wf_0060.jpg,1,normal,WIDER_FACE_val,29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_208.jpg,CC-BY-NC-ND-4.0
+wf_0061.jpg,1,normal,WIDER_FACE_val,29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_42.jpg,CC-BY-NC-ND-4.0
+wf_0062.jpg,1,normal,WIDER_FACE_val,3--Riot/3_Riot_Riot_3_772.jpg,CC-BY-NC-ND-4.0
+wf_0063.jpg,1,normal,WIDER_FACE_val,22--Picnic/22_Picnic_Picnic_22_654.jpg,CC-BY-NC-ND-4.0
+wf_0064.jpg,1,normal,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_Ice_Skating_39_611.jpg,CC-BY-NC-ND-4.0
+wf_0065.jpg,1,normal,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_924.jpg,CC-BY-NC-ND-4.0
+wf_0066.jpg,1,normal,WIDER_FACE_val,15--Stock_Market/15_Stock_Market_Stock_Market_15_781.jpg,CC-BY-NC-ND-4.0
+wf_0067.jpg,1,normal,WIDER_FACE_val,4--Dancing/4_Dancing_Dancing_4_21.jpg,CC-BY-NC-ND-4.0
+wf_0068.jpg,1,normal,WIDER_FACE_val,51--Dresses/51_Dresses_wearingdress_51_398.jpg,CC-BY-NC-ND-4.0
+wf_0069.jpg,1,normal,WIDER_FACE_val,4--Dancing/4_Dancing_Dancing_4_1028.jpg,CC-BY-NC-ND-4.0
+wf_0070.jpg,1,normal,WIDER_FACE_val,31--Waiter_Waitress/31_Waiter_Waitress_Waiter_Waitress_31_517.jpg,CC-BY-NC-ND-4.0
+wf_0071.jpg,3,peer_present,WIDER_FACE_val,51--Dresses/51_Dresses_wearingdress_51_739.jpg,CC-BY-NC-ND-4.0
+wf_0072.jpg,2,peer_present,WIDER_FACE_val,59--people--driving--car/59_peopledrivingcar_peopledrivingcar_59_283.jpg,CC-BY-NC-ND-4.0
+wf_0073.jpg,2,peer_present,WIDER_FACE_val,0--Parade/0_Parade_marchingband_1_710.jpg,CC-BY-NC-ND-4.0
+wf_0074.jpg,3,peer_present,WIDER_FACE_val,36--Football/36_Football_americanfootball_ball_36_81.jpg,CC-BY-NC-ND-4.0
+wf_0075.jpg,3,peer_present,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_Ice_Skating_39_1026.jpg,CC-BY-NC-ND-4.0
+wf_0076.jpg,3,peer_present,WIDER_FACE_val,35--Basketball/35_Basketball_basketballgame_ball_35_736.jpg,CC-BY-NC-ND-4.0
+wf_0077.jpg,2,peer_present,WIDER_FACE_val,61--Street_Battle/61_Street_Battle_streetfight_61_179.jpg,CC-BY-NC-ND-4.0
+wf_0078.jpg,2,peer_present,WIDER_FACE_val,21--Festival/21_Festival_Festival_21_254.jpg,CC-BY-NC-ND-4.0
+wf_0079.jpg,2,peer_present,WIDER_FACE_val,55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_932.jpg,CC-BY-NC-ND-4.0
+wf_0080.jpg,3,peer_present,WIDER_FACE_val,12--Group/12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_759.jpg,CC-BY-NC-ND-4.0
+wf_0081.jpg,2,peer_present,WIDER_FACE_val,13--Interview/13_Interview_Interview_Sequences_13_187.jpg,CC-BY-NC-ND-4.0
+wf_0082.jpg,4,peer_present,WIDER_FACE_val,51--Dresses/51_Dresses_wearingdress_51_280.jpg,CC-BY-NC-ND-4.0
+wf_0083.jpg,4,peer_present,WIDER_FACE_val,2--Demonstration/2_Demonstration_Political_Rally_2_940.jpg,CC-BY-NC-ND-4.0
+wf_0084.jpg,2,peer_present,WIDER_FACE_val,17--Ceremony/17_Ceremony_Ceremony_17_1007.jpg,CC-BY-NC-ND-4.0
+wf_0085.jpg,4,peer_present,WIDER_FACE_val,20--Family_Group/20_Family_Group_Family_Group_20_318.jpg,CC-BY-NC-ND-4.0
+wf_0086.jpg,2,peer_present,WIDER_FACE_val,19--Couple/19_Couple_Couple_19_24.jpg,CC-BY-NC-ND-4.0
+wf_0087.jpg,2,peer_present,WIDER_FACE_val,25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_513.jpg,CC-BY-NC-ND-4.0
+wf_0088.jpg,2,peer_present,WIDER_FACE_val,30--Surgeons/30_Surgeons_Surgeons_30_819.jpg,CC-BY-NC-ND-4.0
+wf_0089.jpg,3,peer_present,WIDER_FACE_val,30--Surgeons/30_Surgeons_Surgeons_30_160.jpg,CC-BY-NC-ND-4.0
+wf_0090.jpg,2,peer_present,WIDER_FACE_val,5--Car_Accident/5_Car_Accident_Accident_5_925.jpg,CC-BY-NC-ND-4.0
+wf_0091.jpg,3,peer_present,WIDER_FACE_val,21--Festival/21_Festival_Festival_21_100.jpg,CC-BY-NC-ND-4.0
+wf_0092.jpg,4,peer_present,WIDER_FACE_val,54--Rescue/54_Rescue_rescuepeople_54_855.jpg,CC-BY-NC-ND-4.0
+wf_0093.jpg,2,peer_present,WIDER_FACE_val,4--Dancing/4_Dancing_Dancing_4_514.jpg,CC-BY-NC-ND-4.0
+wf_0094.jpg,3,peer_present,WIDER_FACE_val,0--Parade/0_Parade_Parade_0_559.jpg,CC-BY-NC-ND-4.0
+wf_0095.jpg,2,peer_present,WIDER_FACE_val,26--Soldier_Drilling/26_Soldier_Drilling_Soldiers_Drilling_26_529.jpg,CC-BY-NC-ND-4.0
+wf_0096.jpg,2,peer_present,WIDER_FACE_val,26--Soldier_Drilling/26_Soldier_Drilling_Soldiers_Drilling_26_64.jpg,CC-BY-NC-ND-4.0
+wf_0097.jpg,2,peer_present,WIDER_FACE_val,19--Couple/19_Couple_Couple_19_1014.jpg,CC-BY-NC-ND-4.0
+wf_0098.jpg,4,peer_present,WIDER_FACE_val,51--Dresses/51_Dresses_wearingdress_51_1035.jpg,CC-BY-NC-ND-4.0
+wf_0099.jpg,4,peer_present,WIDER_FACE_val,44--Aerobics/44_Aerobics_Aerobics_44_688.jpg,CC-BY-NC-ND-4.0
+wf_0100.jpg,4,peer_present,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_507.jpg,CC-BY-NC-ND-4.0
+wf_0101.jpg,2,peer_present,WIDER_FACE_val,13--Interview/13_Interview_Interview_Sequences_13_718.jpg,CC-BY-NC-ND-4.0
+wf_0102.jpg,4,peer_present,WIDER_FACE_val,2--Demonstration/2_Demonstration_Political_Rally_2_752.jpg,CC-BY-NC-ND-4.0
+wf_0103.jpg,2,peer_present,WIDER_FACE_val,35--Basketball/35_Basketball_basketballgame_ball_35_827.jpg,CC-BY-NC-ND-4.0
+wf_0104.jpg,3,peer_present,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_480.jpg,CC-BY-NC-ND-4.0
+wf_0105.jpg,2,peer_present,WIDER_FACE_val,61--Street_Battle/61_Street_Battle_streetfight_61_123.jpg,CC-BY-NC-ND-4.0
+wf_0106.jpg,3,peer_present,WIDER_FACE_val,51--Dresses/51_Dresses_wearingdress_51_268.jpg,CC-BY-NC-ND-4.0
+wf_0107.jpg,3,peer_present,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_165.jpg,CC-BY-NC-ND-4.0
+wf_0108.jpg,4,peer_present,WIDER_FACE_val,12--Group/12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_50.jpg,CC-BY-NC-ND-4.0
+wf_0109.jpg,2,peer_present,WIDER_FACE_val,50--Celebration_Or_Party/50_Celebration_Or_Party_houseparty_50_595.jpg,CC-BY-NC-ND-4.0
+wf_0110.jpg,3,peer_present,WIDER_FACE_val,6--Funeral/6_Funeral_Funeral_6_627.jpg,CC-BY-NC-ND-4.0
+wf_0111.jpg,2,peer_present,WIDER_FACE_val,35--Basketball/35_Basketball_Basketball_35_393.jpg,CC-BY-NC-ND-4.0
+wf_0112.jpg,2,peer_present,WIDER_FACE_val,34--Baseball/34_Baseball_Baseball_34_622.jpg,CC-BY-NC-ND-4.0
+wf_0113.jpg,2,peer_present,WIDER_FACE_val,2--Demonstration/2_Demonstration_Protesters_2_117.jpg,CC-BY-NC-ND-4.0
+wf_0114.jpg,2,peer_present,WIDER_FACE_val,23--Shoppers/23_Shoppers_Shoppers_23_801.jpg,CC-BY-NC-ND-4.0
+wf_0115.jpg,2,peer_present,WIDER_FACE_val,12--Group/12_Group_Large_Group_12_Group_Large_Group_12_527.jpg,CC-BY-NC-ND-4.0
+wf_0116.jpg,3,peer_present,WIDER_FACE_val,12--Group/12_Group_Group_12_Group_Group_12_153.jpg,CC-BY-NC-ND-4.0
+wf_0117.jpg,3,peer_present,WIDER_FACE_val,35--Basketball/35_Basketball_basketballgame_ball_35_341.jpg,CC-BY-NC-ND-4.0
+wf_0118.jpg,3,peer_present,WIDER_FACE_val,45--Balloonist/45_Balloonist_Balloonist_45_225.jpg,CC-BY-NC-ND-4.0
+wf_0119.jpg,2,peer_present,WIDER_FACE_val,55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_499.jpg,CC-BY-NC-ND-4.0
+wf_0120.jpg,3,peer_present,WIDER_FACE_val,46--Jockey/46_Jockey_Jockey_46_933.jpg,CC-BY-NC-ND-4.0
+wf_0121.jpg,2,peer_present,WIDER_FACE_val,27--Spa/27_Spa_Spa_27_168.jpg,CC-BY-NC-ND-4.0
+wf_0122.jpg,3,peer_present,WIDER_FACE_val,56--Voter/56_Voter_peoplevoting_56_946.jpg,CC-BY-NC-ND-4.0
+wf_0123.jpg,2,peer_present,WIDER_FACE_val,52--Photographers/52_Photographers_taketouristphotos_52_3.jpg,CC-BY-NC-ND-4.0
+wf_0124.jpg,4,peer_present,WIDER_FACE_val,56--Voter/56_Voter_peoplevoting_56_21.jpg,CC-BY-NC-ND-4.0
+wf_0125.jpg,3,peer_present,WIDER_FACE_val,12--Group/12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_617.jpg,CC-BY-NC-ND-4.0
+wf_0126.jpg,1,occlusion,WIDER_FACE_val,27--Spa/27_Spa_Spa_27_420.jpg,CC-BY-NC-ND-4.0
+wf_0127.jpg,1,occlusion,WIDER_FACE_val,3--Riot/3_Riot_Riot_3_123.jpg,CC-BY-NC-ND-4.0
+wf_0128.jpg,1,occlusion,WIDER_FACE_val,41--Swimming/41_Swimming_Swimmer_41_538.jpg,CC-BY-NC-ND-4.0
+wf_0129.jpg,1,occlusion,WIDER_FACE_val,0--Parade/0_Parade_Parade_0_353.jpg,CC-BY-NC-ND-4.0
+wf_0130.jpg,1,occlusion,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_90.jpg,CC-BY-NC-ND-4.0
+wf_0131.jpg,1,occlusion,WIDER_FACE_val,53--Raid/53_Raid_policeraid_53_280.jpg,CC-BY-NC-ND-4.0
+wf_0132.jpg,1,occlusion,WIDER_FACE_val,2--Demonstration/2_Demonstration_Protesters_2_583.jpg,CC-BY-NC-ND-4.0
+wf_0133.jpg,1,occlusion,WIDER_FACE_val,24--Soldier_Firing/24_Soldier_Firing_Soldier_Firing_24_1037.jpg,CC-BY-NC-ND-4.0
+wf_0134.jpg,1,occlusion,WIDER_FACE_val,52--Photographers/52_Photographers_photographertakingphoto_52_310.jpg,CC-BY-NC-ND-4.0
+wf_0135.jpg,1,occlusion,WIDER_FACE_val,8--Election_Campain/8_Election_Campain_Election_Campaign_8_437.jpg,CC-BY-NC-ND-4.0
+wf_0136.jpg,1,occlusion,WIDER_FACE_val,2--Demonstration/2_Demonstration_Demonstration_Or_Protest_2_915.jpg,CC-BY-NC-ND-4.0
+wf_0137.jpg,1,occlusion,WIDER_FACE_val,24--Soldier_Firing/24_Soldier_Firing_Soldier_Firing_24_254.jpg,CC-BY-NC-ND-4.0
+wf_0138.jpg,1,occlusion,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_788.jpg,CC-BY-NC-ND-4.0
+wf_0139.jpg,1,occlusion,WIDER_FACE_val,24--Soldier_Firing/24_Soldier_Firing_Soldier_Firing_24_368.jpg,CC-BY-NC-ND-4.0
+wf_0140.jpg,1,occlusion,WIDER_FACE_val,5--Car_Accident/5_Car_Accident_Car_Crash_5_38.jpg,CC-BY-NC-ND-4.0
+wf_0141.jpg,1,occlusion,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_770.jpg,CC-BY-NC-ND-4.0
+wf_0142.jpg,1,occlusion,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_880.jpg,CC-BY-NC-ND-4.0
+wf_0143.jpg,1,occlusion,WIDER_FACE_val,16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_141.jpg,CC-BY-NC-ND-4.0
+wf_0144.jpg,1,occlusion,WIDER_FACE_val,2--Demonstration/2_Demonstration_Demonstrators_2_12.jpg,CC-BY-NC-ND-4.0
+wf_0145.jpg,1,occlusion,WIDER_FACE_val,53--Raid/53_Raid_policeraid_53_178.jpg,CC-BY-NC-ND-4.0
+wf_0146.jpg,1,partial_occlusion,WIDER_FACE_val,12--Group/12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_313.jpg,CC-BY-NC-ND-4.0
+wf_0147.jpg,1,partial_occlusion,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_738.jpg,CC-BY-NC-ND-4.0
+wf_0148.jpg,1,partial_occlusion,WIDER_FACE_val,41--Swimming/41_Swimming_Swimming_41_521.jpg,CC-BY-NC-ND-4.0
+wf_0149.jpg,1,partial_occlusion,WIDER_FACE_val,3--Riot/3_Riot_Riot_3_963.jpg,CC-BY-NC-ND-4.0
+wf_0150.jpg,1,partial_occlusion,WIDER_FACE_val,22--Picnic/22_Picnic_Picnic_22_483.jpg,CC-BY-NC-ND-4.0
+wf_0151.jpg,1,partial_occlusion,WIDER_FACE_val,42--Car_Racing/42_Car_Racing_Nascar_42_900.jpg,CC-BY-NC-ND-4.0
+wf_0152.jpg,1,partial_occlusion,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_iceskiing_39_777.jpg,CC-BY-NC-ND-4.0
+wf_0153.jpg,1,partial_occlusion,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_282.jpg,CC-BY-NC-ND-4.0
+wf_0154.jpg,1,partial_occlusion,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_443.jpg,CC-BY-NC-ND-4.0
+wf_0155.jpg,1,partial_occlusion,WIDER_FACE_val,4--Dancing/4_Dancing_Dancing_4_319.jpg,CC-BY-NC-ND-4.0
+wf_0156.jpg,1,partial_occlusion,WIDER_FACE_val,12--Group/12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_319.jpg,CC-BY-NC-ND-4.0
+wf_0157.jpg,1,partial_occlusion,WIDER_FACE_val,28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_711.jpg,CC-BY-NC-ND-4.0
+wf_0158.jpg,1,partial_occlusion,WIDER_FACE_val,34--Baseball/34_Baseball_Baseball_34_756.jpg,CC-BY-NC-ND-4.0
+wf_0159.jpg,1,partial_occlusion,WIDER_FACE_val,20--Family_Group/20_Family_Group_Family_Group_20_493.jpg,CC-BY-NC-ND-4.0
+wf_0160.jpg,1,partial_occlusion,WIDER_FACE_val,36--Football/36_Football_americanfootball_ball_36_279.jpg,CC-BY-NC-ND-4.0
+wf_0161.jpg,1,angle,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_Ice_Skating_39_682.jpg,CC-BY-NC-ND-4.0
+wf_0162.jpg,1,angle,WIDER_FACE_val,40--Gymnastics/40_Gymnastics_Gymnastics_40_980.jpg,CC-BY-NC-ND-4.0
+wf_0163.jpg,1,angle,WIDER_FACE_val,41--Swimming/41_Swimming_Swimming_41_52.jpg,CC-BY-NC-ND-4.0
+wf_0164.jpg,1,angle,WIDER_FACE_val,49--Greeting/49_Greeting_peoplegreeting_49_890.jpg,CC-BY-NC-ND-4.0
+wf_0165.jpg,1,angle,WIDER_FACE_val,43--Row_Boat/43_Row_Boat_Canoe_43_565.jpg,CC-BY-NC-ND-4.0
+wf_0166.jpg,1,angle,WIDER_FACE_val,12--Group/12_Group_Group_12_Group_Group_12_794.jpg,CC-BY-NC-ND-4.0
+wf_0167.jpg,1,angle,WIDER_FACE_val,32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_170.jpg,CC-BY-NC-ND-4.0
+wf_0168.jpg,1,angle,WIDER_FACE_val,40--Gymnastics/40_Gymnastics_Gymnastics_40_749.jpg,CC-BY-NC-ND-4.0
+wf_0169.jpg,1,angle,WIDER_FACE_val,25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_683.jpg,CC-BY-NC-ND-4.0
+wf_0170.jpg,1,angle,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_Ice_Skating_39_458.jpg,CC-BY-NC-ND-4.0
+wf_0171.jpg,1,angle,WIDER_FACE_val,54--Rescue/54_Rescue_firemanrescue_54_814.jpg,CC-BY-NC-ND-4.0
+wf_0172.jpg,1,angle,WIDER_FACE_val,27--Spa/27_Spa_Spa_27_212.jpg,CC-BY-NC-ND-4.0
+wf_0173.jpg,1,angle,WIDER_FACE_val,47--Matador_Bullfighter/47_Matador_Bullfighter_Matador_Bullfighter_47_636.jpg,CC-BY-NC-ND-4.0
+wf_0174.jpg,1,angle,WIDER_FACE_val,35--Basketball/35_Basketball_playingbasketball_35_199.jpg,CC-BY-NC-ND-4.0
+wf_0175.jpg,1,angle,WIDER_FACE_val,12--Group/12_Group_Large_Group_12_Group_Large_Group_12_1007.jpg,CC-BY-NC-ND-4.0
+wf_0176.jpg,1,angle,WIDER_FACE_val,35--Basketball/35_Basketball_playingbasketball_35_283.jpg,CC-BY-NC-ND-4.0
+wf_0177.jpg,1,angle,WIDER_FACE_val,8--Election_Campain/8_Election_Campain_Election_Campaign_8_133.jpg,CC-BY-NC-ND-4.0
+wf_0178.jpg,1,angle,WIDER_FACE_val,52--Photographers/52_Photographers_photographertakingphoto_52_125.jpg,CC-BY-NC-ND-4.0
+wf_0179.jpg,1,angle,WIDER_FACE_val,11--Meeting/11_Meeting_Meeting_11_Meeting_Meeting_11_349.jpg,CC-BY-NC-ND-4.0
+wf_0180.jpg,1,angle,WIDER_FACE_val,35--Basketball/35_Basketball_playingbasketball_35_279.jpg,CC-BY-NC-ND-4.0
+wf_0181.jpg,1,lighting,WIDER_FACE_val,44--Aerobics/44_Aerobics_Aerobics_44_339.jpg,CC-BY-NC-ND-4.0
+wf_0182.jpg,1,lighting,WIDER_FACE_val,25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_761.jpg,CC-BY-NC-ND-4.0
+wf_0183.jpg,1,lighting,WIDER_FACE_val,10--People_Marching/10_People_Marching_People_Marching_2_934.jpg,CC-BY-NC-ND-4.0
+wf_0184.jpg,1,lighting,WIDER_FACE_val,49--Greeting/49_Greeting_peoplegreeting_49_903.jpg,CC-BY-NC-ND-4.0
+wf_0185.jpg,1,lighting,WIDER_FACE_val,1--Handshaking/1_Handshaking_Handshaking_1_362.jpg,CC-BY-NC-ND-4.0
+wf_0186.jpg,1,lighting,WIDER_FACE_val,56--Voter/56_Voter_peoplevoting_56_953.jpg,CC-BY-NC-ND-4.0
+wf_0187.jpg,1,lighting,WIDER_FACE_val,21--Festival/21_Festival_Festival_21_219.jpg,CC-BY-NC-ND-4.0
+wf_0188.jpg,1,lighting,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_613.jpg,CC-BY-NC-ND-4.0
+wf_0189.jpg,1,lighting,WIDER_FACE_val,3--Riot/3_Riot_Riot_3_106.jpg,CC-BY-NC-ND-4.0
+wf_0190.jpg,1,lighting,WIDER_FACE_val,12--Group/12_Group_Large_Group_12_Group_Large_Group_12_853.jpg,CC-BY-NC-ND-4.0
+wf_0191.jpg,1,lighting,WIDER_FACE_val,18--Concerts/18_Concerts_Concerts_18_1004.jpg,CC-BY-NC-ND-4.0
+wf_0192.jpg,1,lighting,WIDER_FACE_val,13--Interview/13_Interview_Interview_On_Location_13_791.jpg,CC-BY-NC-ND-4.0
+wf_0193.jpg,1,lighting,WIDER_FACE_val,24--Soldier_Firing/24_Soldier_Firing_Soldier_Firing_24_405.jpg,CC-BY-NC-ND-4.0
+wf_0194.jpg,1,lighting,WIDER_FACE_val,13--Interview/13_Interview_Interview_Sequences_13_3.jpg,CC-BY-NC-ND-4.0
+wf_0195.jpg,1,lighting,WIDER_FACE_val,44--Aerobics/44_Aerobics_Aerobics_44_71.jpg,CC-BY-NC-ND-4.0
+wf_0196.jpg,1,lighting,WIDER_FACE_val,35--Basketball/35_Basketball_playingbasketball_35_556.jpg,CC-BY-NC-ND-4.0
+wf_0197.jpg,1,lighting,WIDER_FACE_val,38--Tennis/38_Tennis_Tennis_38_94.jpg,CC-BY-NC-ND-4.0
+wf_0198.jpg,1,lighting,WIDER_FACE_val,8--Election_Campain/8_Election_Campain_Election_Campaign_8_451.jpg,CC-BY-NC-ND-4.0
+wf_0199.jpg,1,lighting,WIDER_FACE_val,35--Basketball/35_Basketball_playingbasketball_35_823.jpg,CC-BY-NC-ND-4.0
+wf_0200.jpg,1,lighting,WIDER_FACE_val,9--Press_Conference/9_Press_Conference_Press_Conference_9_332.jpg,CC-BY-NC-ND-4.0
+wf_0201.jpg,1,blur,WIDER_FACE_val,30--Surgeons/30_Surgeons_Surgeons_30_911.jpg,CC-BY-NC-ND-4.0
+wf_0202.jpg,1,blur,WIDER_FACE_val,11--Meeting/11_Meeting_Meeting_11_Meeting_Meeting_11_468.jpg,CC-BY-NC-ND-4.0
+wf_0203.jpg,1,blur,WIDER_FACE_val,10--People_Marching/10_People_Marching_People_Marching_2_591.jpg,CC-BY-NC-ND-4.0
+wf_0204.jpg,1,blur,WIDER_FACE_val,12--Group/12_Group_Large_Group_12_Group_Large_Group_12_1007.jpg,CC-BY-NC-ND-4.0
+wf_0205.jpg,1,blur,WIDER_FACE_val,47--Matador_Bullfighter/47_Matador_Bullfighter_Matador_Bullfighter_47_354.jpg,CC-BY-NC-ND-4.0
+wf_0206.jpg,1,blur,WIDER_FACE_val,7--Cheering/7_Cheering_Cheering_7_386.jpg,CC-BY-NC-ND-4.0
+wf_0207.jpg,1,blur,WIDER_FACE_val,2--Demonstration/2_Demonstration_Protesters_2_684.jpg,CC-BY-NC-ND-4.0
+wf_0208.jpg,1,blur,WIDER_FACE_val,23--Shoppers/23_Shoppers_Shoppers_23_514.jpg,CC-BY-NC-ND-4.0
+wf_0209.jpg,1,blur,WIDER_FACE_val,0--Parade/0_Parade_marchingband_1_356.jpg,CC-BY-NC-ND-4.0
+wf_0210.jpg,1,blur,WIDER_FACE_val,39--Ice_Skating/39_Ice_Skating_iceskiing_39_908.jpg,CC-BY-NC-ND-4.0
+wf_0211.jpg,1,blur,WIDER_FACE_val,34--Baseball/34_Baseball_Baseball_34_580.jpg,CC-BY-NC-ND-4.0
+wf_0212.jpg,1,blur,WIDER_FACE_val,25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_936.jpg,CC-BY-NC-ND-4.0
+neg_0001.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""13--Interview/13_Interview_Interview_On_Location_13_208.jpg @ (0""""""""""""""",0
+neg_0002.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_859.jpg @ (0""""""""""""""",400
+neg_0003.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_12.jpg @ (0""""""""""""""",0
+neg_0004.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""41--Swimming/41_Swimming_Swimmer_41_931.jpg @ (0""""""""""""""",0
+neg_0005.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""17--Ceremony/17_Ceremony_Ceremony_17_344.jpg @ (0""""""""""""""",0
+neg_0006.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""2--Demonstration/2_Demonstration_Protesters_2_163.jpg @ (0""""""""""""""",280
+neg_0007.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""39--Ice_Skating/39_Ice_Skating_iceskiing_39_310.jpg @ (600""""""""""""""",0
+neg_0008.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""41--Swimming/41_Swimming_Swimmer_41_483.jpg @ (0""""""""""""""",0
+neg_0009.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""56--Voter/56_Voter_peoplevoting_56_579.jpg @ (280""""""""""""""",0
+neg_0010.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_346.jpg @ (0""""""""""""""",160
+neg_0011.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_198.jpg @ (0""""""""""""""",360
+neg_0012.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""22--Picnic/22_Picnic_Picnic_22_561.jpg @ (0""""""""""""""",0
+neg_0013.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""58--Hockey/58_Hockey_icehockey_puck_58_50.jpg @ (0""""""""""""""",0
+neg_0014.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""58--Hockey/58_Hockey_icehockey_puck_58_113.jpg @ (600""""""""""""""",120
+neg_0015.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""20--Family_Group/20_Family_Group_Family_Group_20_411.jpg @ (0""""""""""""""",0
+neg_0016.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_873.jpg @ (560""""""""""""""",200
+neg_0017.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""58--Hockey/58_Hockey_icehockey_puck_58_182.jpg @ (0""""""""""""""",0
+neg_0018.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""39--Ice_Skating/39_Ice_Skating_iceskiing_39_591.jpg @ (0""""""""""""""",0
+neg_0019.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""35--Basketball/35_Basketball_playingbasketball_35_794.jpg @ (520""""""""""""""",240
+neg_0020.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""20--Family_Group/20_Family_Group_Family_Group_20_835.jpg @ (240""""""""""""""",0
+neg_0021.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""0--Parade/0_Parade_marchingband_1_172.jpg @ (0""""""""""""""",240
+neg_0022.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""45--Balloonist/45_Balloonist_Balloonist_45_107.jpg @ (0""""""""""""""",0
+neg_0023.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""28--Sports_Fan/28_Sports_Fan_Sports_Fan_28_792.jpg @ (0""""""""""""""",0
+neg_0024.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""44--Aerobics/44_Aerobics_Aerobics_44_379.jpg @ (0""""""""""""""",0
+neg_0025.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""6--Funeral/6_Funeral_Funeral_6_364.jpg @ (240""""""""""""""",200
+neg_0026.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""2--Demonstration/2_Demonstration_Protesters_2_362.jpg @ (360""""""""""""""",0
+neg_0027.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""2--Demonstration/2_Demonstration_Political_Rally_2_700.jpg @ (0""""""""""""""",200
+neg_0028.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""40--Gymnastics/40_Gymnastics_Gymnastics_40_1035.jpg @ (0""""""""""""""",0
+neg_0029.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""2--Demonstration/2_Demonstration_Demonstrators_2_329.jpg @ (0""""""""""""""",200
+neg_0030.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""54--Rescue/54_Rescue_rescuepeople_54_602.jpg @ (0""""""""""""""",320
+neg_0031.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""30--Surgeons/30_Surgeons_Surgeons_30_862.jpg @ (0""""""""""""""",0
+neg_0032.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""21--Festival/21_Festival_Festival_21_462.jpg @ (0""""""""""""""",0
+neg_0033.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""47--Matador_Bullfighter/47_Matador_Bullfighter_matadorbullfighting_47_641.jpg @ (0""""""""""""""",0
+neg_0034.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""27--Spa/27_Spa_Spa_27_121.jpg @ (240""""""""""""""",0
+neg_0035.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""53--Raid/53_Raid_policeraid_53_696.jpg @ (0""""""""""""""",280
+neg_0036.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""35--Basketball/35_Basketball_basketballgame_ball_35_904.jpg @ (640""""""""""""""",0
+neg_0037.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_209.jpg @ (0""""""""""""""",0
+neg_0038.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""49--Greeting/49_Greeting_peoplegreeting_49_56.jpg @ (560""""""""""""""",200
+neg_0039.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""44--Aerobics/44_Aerobics_Aerobics_44_231.jpg @ (0""""""""""""""",0
+neg_0040.jpg,0,background_crop,WIDER_FACE_val (derived negative),"""""""""""""""""""""""""""""""29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_380.jpg @ (0""""""""""""""",0
+mask_0001.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_1,see-source-dataset
+mask_0002.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_2,see-source-dataset
+mask_0003.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_9,see-source-dataset
+mask_0004.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_10,see-source-dataset
+mask_0005.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_13,see-source-dataset
+mask_0006.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_16,see-source-dataset
+mask_0007.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_17,see-source-dataset
+mask_0008.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_19,see-source-dataset
+mask_0009.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_25,see-source-dataset
+mask_0010.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_32,see-source-dataset
+mask_0011.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_33,see-source-dataset
+mask_0012.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_34,see-source-dataset
+mask_0013.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_38,see-source-dataset
+mask_0014.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_40,see-source-dataset
+mask_0015.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_43,see-source-dataset
+mask_0016.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_44,see-source-dataset
+mask_0017.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_45,see-source-dataset
+mask_0018.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_46,see-source-dataset
+mask_0019.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_47,see-source-dataset
+mask_0020.jpg,1,mask,DamarJati/Face-Mask-Detection (Kaggle face-mask-12k-images-dataset),row_48,see-source-dataset
+oep_subject9_00443s.jpg,0,absent,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject9_00443s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject9_00448s.jpg,0,absent,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject9_00448s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject9_00451s.jpg,0,absent,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject9_00451s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00605s.jpg,0,absent,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00605s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00054s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00054s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00064s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00064s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00076s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00076s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00089s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00089s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00099s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00099s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00104s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00104s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00146s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00146s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00034s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00034s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00099s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00099s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00203s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00203s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00312s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00312s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00401s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00401s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00513s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00513s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00570s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00570s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00657s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00657s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00166s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00166s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00188s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00188s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00195s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00195s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00213s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00213s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00215s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00215s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00305s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00305s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00188s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00188s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00307s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00307s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00317s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00317s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00347s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00347s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00518s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00518s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00840s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00840s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00798s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00798s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00843s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00843s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00461s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00461s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00766s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00766s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00771s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00771s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00808s.jpg,1,occlusion,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00808s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00317s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00317s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00404s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00404s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00409s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00409s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00429s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00429s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00481s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00481s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00734s.jpg,1,occlusion;angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00734s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00000s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00000s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00002s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00002s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject11_00004s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject11_00004s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00000s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00000s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00002s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00002s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00004s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00004s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00734s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00734s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00000s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00000s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00004s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00004s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00007s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00007s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00002s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00002s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00855s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00855s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00166s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00166s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00208s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00208s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00243s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00243s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00292s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00292s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00312s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00312s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00352s.jpg,2,peer_present,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00352s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00252s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00252s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00714s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00714s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00788s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00788s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00892s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00892s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00007s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00007s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00213s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00213s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00391s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00391s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00468s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00468s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00582s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00582s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00689s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00689s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00758s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00758s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject13_00825s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject13_00825s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00014s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00014s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00047s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00047s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00121s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00121s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00220s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00220s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00337s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00337s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00461s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00461s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject14_00491s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject14_00491s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00101s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00101s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00190s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00190s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00312s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00312s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00441s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00441s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00548s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00548s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject15_00644s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject15_00644s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00024s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00024s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00104s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00104s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00193s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00193s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00312s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00312s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00411s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00411s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00508s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00508s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00592s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00592s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject16_00716s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject16_00716s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00034s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00034s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00054s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00054s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00086s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00086s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00153s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00153s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00362s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00362s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00411s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00411s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00486s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00486s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00540s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00540s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00627s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00627s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject19_00704s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject19_00704s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00047s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00047s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00121s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00121s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00195s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00195s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00372s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00372s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00545s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00545s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00674s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00674s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00798s.jpg,1,glasses,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00798s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00007s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00007s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00131s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00131s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00225s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00225s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00307s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00307s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00421s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00421s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00580s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00580s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00662s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00662s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00744s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00744s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject10_00823s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject10_00823s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00012s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00012s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00071s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00071s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00205s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00205s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00334s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00334s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00453s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00453s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00572s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00572s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00691s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00691s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject12_00818s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject12_00818s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00000s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00000s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00037s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00037s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00101s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00101s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00280s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00280s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00339s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00339s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00466s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00466s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00587s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00587s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00716s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00716s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00793s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00793s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject18_00825s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject18_00825s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00002s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00002s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00081s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00081s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00240s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00240s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00319s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00319s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00399s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00399s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00478s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00478s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00637s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00637s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject5_00796s.jpg,1,angle,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject5_00796s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00002s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00002s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00267s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00267s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00396s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00396s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00473s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00473s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00570s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00570s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00624s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00624s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00756s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00756s,research-use (Kaggle: raajanwankhade/oep-dataset)
+oep_subject20_00890s.jpg,1,normal,"MSU_OEP (Atoum et al., IEEE TMM 2017)",subject20_00890s,research-use (Kaggle: raajanwankhade/oep-dataset)
