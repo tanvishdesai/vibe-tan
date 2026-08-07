@@ -3,7 +3,10 @@
 // (frontend/src/components/ai/FaceDetectorWorker.ts: MediaPipeFaceDetector,
 // runtime "tfjs", modelType "full", maxFaces 10) against every frame in
 // labels.csv and computes precision/recall/F1 + a confusion matrix, overall
-// and broken down by condition tag.
+// and broken down by condition tag. labels.csv is OEP (real exam webcam,
+// see kaggle/) plus a small external mask-condition set -- WIDER FACE
+// (general event photography, not webcam footage) was dropped as not
+// representative of the actual use case, see REPORT.md.
 //
 // The frontend maps raw face count to proctoring anomalies as:
 //   0 faces  -> NO_FACE
@@ -20,6 +23,7 @@ import { readCsv } from "./lib/csv.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FRAMES_DIR = path.join(__dirname, "frames");
+const QC_DIR = path.join(__dirname, "qc-review");
 const MAX_SIDE = 1280; // cap resolution to a realistic webcam-frame scale
 
 function bucketOf(count) {
@@ -126,15 +130,26 @@ async function main() {
       const faces = await detector.estimateFaces(tensor);
       const predictedCount = faces.length;
       const groundTruthCount = Number(label.ground_truth_face_count);
+      const predictedBucket = bucketOf(predictedCount);
+      const groundTruthBucket = bucketOf(groundTruthCount);
       rows.push({
         frame_id: label.frame_id,
         condition_tags: label.condition_tags,
-        source: label.frame_id.startsWith("oep_") ? "OEP (real exam webcam)" : "WIDER_FACE / mask dataset",
         groundTruthCount,
-        groundTruthBucket: bucketOf(groundTruthCount),
+        groundTruthBucket,
         predictedCount,
-        predictedBucket: bucketOf(predictedCount),
+        predictedBucket,
       });
+
+      // Manual QC: sort each frame into a folder named after the model's
+      // predicted bucket, with predicted+actual counts baked into the
+      // filename, so mispredictions can be eyeballed without cross-referencing
+      // labels.csv/results.json.
+      const qcDir = path.join(QC_DIR, predictedBucket);
+      fs.mkdirSync(qcDir, { recursive: true });
+      const base = label.frame_id.replace(/\.jpg$/i, "");
+      const qcName = `${base}__pred-${predictedBucket}(${predictedCount})__actual-${groundTruthBucket}(${groundTruthCount}).jpg`;
+      fs.copyFileSync(framePath, path.join(qcDir, qcName));
     } catch (err) {
       console.warn(`  detection failed on ${label.frame_id}: ${err.message}`);
     } finally {
@@ -163,18 +178,6 @@ async function main() {
     };
   }
 
-  const sourceBreakdown = {};
-  for (const source of new Set(rows.map((r) => r.source))) {
-    const subset = rows.filter((r) => r.source === source);
-    sourceBreakdown[source] = {
-      frameCount: subset.length,
-      accuracy: subset.filter((r) => r.predictedBucket === r.groundTruthBucket).length / subset.length,
-      noFace: computeBinaryMetrics(subset, "NO_FACE", "predictedBucket"),
-      multipleFaces: computeBinaryMetrics(subset, "MULTIPLE_FACES", "predictedBucket"),
-      confusion: confusionMatrix(subset, "predictedBucket"),
-    };
-  }
-
   const misclassified = rows
     .filter((r) => r.predictedBucket !== r.groundTruthBucket)
     .map((r) => ({
@@ -191,7 +194,6 @@ async function main() {
     overallConfusion,
     noFaceMetrics,
     multiFaceMetrics,
-    sourceBreakdown,
     conditionBreakdown,
     misclassified,
   };
@@ -210,13 +212,6 @@ async function main() {
 
   console.log("\n=== Confusion matrix (rows=ground truth, cols=predicted) ===");
   console.table(overallConfusion);
-
-  console.log("\n=== By source ===");
-  for (const [source, m] of Object.entries(sourceBreakdown)) {
-    console.log(
-      `${source.padEnd(28)} n=${String(m.frameCount).padEnd(4)} acc=${(m.accuracy * 100).toFixed(1)}%  NO_FACE f1=${fmt(m.noFace.f1)}  MULTIPLE_FACES f1=${fmt(m.multipleFaces.f1)}`,
-    );
-  }
 
   console.log("\n=== By condition ===");
   for (const [tag, m] of Object.entries(conditionBreakdown)) {

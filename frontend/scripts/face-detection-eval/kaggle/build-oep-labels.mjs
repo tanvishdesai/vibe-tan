@@ -77,6 +77,19 @@ add(frames("subject18", [0, 37, 101, 280, 339, 466, 587, 716, 793, 825]), 1, "no
 add(frames("subject5", [2, 81, 240, 319, 399, 478, 637, 796]), 1, "angle"); // camera mounted off to the side
 add(frames("subject20", [2, 267, 396, 473, 570, 624, 756, 890]), 1, "normal");
 
+// --- Category F: subject1 ("acting" group; deprioritized vs. the 9 "real
+// exam" subjects per the notebook's stated priority, so never reviewed in
+// the original pass -- reviewed here via contact sheets 034/035/066-069).
+// Single male subject, glasses. Clean single-face stretches throughout,
+// several hand-over-mouth/chin moments, downward reading-angle moments, and
+// one genuine peer-present event (~148-156s: a second person in a striped
+// sweater, facial features clearly visible, not a glasses double-count
+// artifact -- two visually distinct people in frame). ---
+add(frames("subject1", [4, 34, 64, 124, 193, 223, 262, 758]), 1, "normal");
+add(frames("subject1", [461, 471, 510, 520]), 1, "angle");
+add(frames("subject1", [431, 441, 610]), 1, "occlusion"); // hand over mouth/chin
+add(frames("subject1", [148, 156]), 2, "peer_present"); // second person (striped sweater) in background
+
 // --- copy frames + append to labels.csv ---
 fs.mkdirSync(DEST_FRAMES, { recursive: true });
 let copied = 0;
@@ -96,8 +109,14 @@ if (missing.length) {
   missing.forEach((m) => console.warn(`  ${m}`));
 }
 
-const existing = readCsv(LABELS_CSV);
-const merged = [...existing, ...rows.filter((r) => !missing.includes(r.frame_id))];
+// `rows` is the full, authoritative OEP label set on every run (not just new
+// additions), so re-running this script must replace any prior OEP rows in
+// labels.csv rather than append alongside them -- otherwise every re-run
+// duplicates the previous OEP rows.
+const included = rows.filter((r) => !missing.includes(r.frame_id));
+const newIds = new Set(included.map((r) => r.frame_id));
+const existing = readCsv(LABELS_CSV).filter((r) => !newIds.has(r.frame_id));
+const merged = [...existing, ...included];
 writeCsv(LABELS_CSV, ["frame_id", "ground_truth_face_count", "condition_tags", "source_dataset", "source_image", "license"], merged);
 
 console.log(`Copied ${copied} OEP frames, appended to labels.csv`);

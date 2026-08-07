@@ -7,31 +7,34 @@ Offline accuracy evaluation for the proctoring face-count detector
 Not part of the app build — a standalone tool with its own `package.json`,
 run manually.
 
-The dataset (`frames/`, `labels.csv`, 426 frames) combines two sources: WIDER
-FACE (real annotated data, but general event photography) and 154 frames
-hand-labeled from real exam-webcam footage (the MSU OEP dataset, via the
-Kaggle pipeline in [kaggle/](./kaggle/README.md)) — the actual use case. See
-REPORT.md's "By source" table: the webcam-realistic subset alone shows
-`NO_FACE` precision of 0.06, notably worse than WIDER FACE suggested on its
-own.
+The dataset (`frames/`, `labels.csv`, 211 frames) is real exam-webcam footage
+plus two small non-webcam edge-case sources OEP structurally can't supply:
+171 frames hand-labeled from the MSU OEP dataset (via the Kaggle pipeline in
+[kaggle/](./kaggle/README.md)) — the actual use case — 20 external
+mask-condition frames (OEP predates mask-wearing as routine exam attire), and
+20 real OEP frames with a synthetic exposure transform applied for the
+`lighting` condition (OEP's webcam auto-exposure means it has no genuine
+poor-lighting frames either — see REPORT.md's "Methodology" and
+"Limitations" for the full reasoning, including why a real external
+low-light dataset was evaluated and rejected). An earlier pass of this eval
+also included WIDER FACE (general event photography); it was dropped
+entirely as not representative of the actual use case.
 
 ## Layout
 
 ```
 labels.csv                    frame_id, ground_truth_face_count, condition_tags, ...
-frames/                       the 426 labeled test frames (272 WIDER-derived + 154 OEP webcam)
+frames/                       the 211 labeled test frames (171 OEP webcam + 20 mask + 20 synthetic lighting)
 run-eval.mjs                  runs the production model config against labels.csv
-results.json                  eval output (metrics + per-frame + per-source predictions)
+results.json                  eval output (metrics + per-frame + per-condition predictions)
 REPORT.md                     write-up: methodology, results, decision
 
-build-dataset-wider.mjs       regenerates the WIDER FACE-derived frames (needs raw WIDER FACE download)
-build-dataset-negatives.mjs   regenerates the 0-face crops (needs raw WIDER FACE download)
 build-dataset-mask.mjs        regenerates the mask-condition frames (fetches from HF directly, no download needed)
-build-labels-csv.mjs          merges the three *-selection.json manifests into labels.csv
+mask-selection.json           provenance: exact source image per mask frame
 lib/                          shared parsing/CSV helpers
-*-selection.json              provenance: exact source image (+ crop box, for negatives) per frame
 
-kaggle/                       webcam-realistic dataset: extraction notebook + human-reviewed labels, see kaggle/README.md
+kaggle/                       OEP dataset: extraction notebook + human-reviewed labels, see kaggle/README.md
+                               (also kaggle/build-synthetic-lighting.mjs, the lighting-condition generator)
 ```
 
 `frames/` and `labels.csv` are committed — you don't need to regenerate
@@ -50,26 +53,23 @@ a summary table.
 
 ## Regenerate the dataset from scratch
 
-Only needed if you want to change the frame selection (different seed,
-different bucket sizes, etc.) — not needed to just re-run the eval.
+Only needed if you want to change the frame selection — not needed to just
+re-run the eval.
 
-1. Download the WIDER FACE validation split and annotations:
-   ```
-   curl -L -o WIDER_val.zip https://huggingface.co/datasets/CUHK-CSE/wider_face/resolve/main/data/WIDER_val.zip
-   curl -L -o wider_face_split.zip https://huggingface.co/datasets/CUHK-CSE/wider_face/resolve/main/data/wider_face_split.zip
-   unzip WIDER_val.zip && unzip wider_face_split.zip
-   ```
-   License: CC BY-NC-ND 4.0 (non-commercial). ~366MB combined — not committed
-   to this repo.
-2. Run the three builders, then merge:
-   ```
-   node build-dataset-wider.mjs      <path>/WIDER_val/images <path>/wider_face_split/wider_face_val_bbx_gt.txt
-   node build-dataset-negatives.mjs  <path>/WIDER_val/images <path>/wider_face_split/wider_face_val_bbx_gt.txt
-   node build-dataset-mask.mjs
-   node build-labels-csv.mjs
-   ```
-   `build-dataset-wider.mjs` uses a fixed PRNG seed, so re-running against the
-   same WIDER FACE download reproduces the same frame selection.
+- **Mask frames**: `node build-dataset-mask.mjs` — fetches directly from a
+  public HuggingFace dataset, no download needed. Writes `mask-selection.json`
+  and the `mask_*.jpg` frames, but does not merge into `labels.csv` itself
+  (append manually, or follow the pattern in `kaggle/build-oep-labels.mjs`).
+- **OEP frames**: see [kaggle/README.md](./kaggle/README.md) — requires
+  re-running the Kaggle notebook (phone-verification-gated Kernels API, so
+  it's a manual web-UI run, not `kaggle kernels push`) or, if the raw
+  candidate frame dump (`kaggle/results/frames/`) is already available
+  locally, re-running `node kaggle/build-oep-labels.mjs` directly against it.
+- **Synthetic lighting frames**: `node kaggle/build-synthetic-lighting.mjs` —
+  also needs `kaggle/results/frames/` locally (same raw candidate dump as
+  above). Picks previously-unused single-face candidates and writes
+  underexposed/overexposed versions straight into `../frames/`, merging into
+  `labels.csv` the same dedup-safe way `build-oep-labels.mjs` does.
 
 ## Why WASM instead of `@tensorflow/tfjs-node`
 

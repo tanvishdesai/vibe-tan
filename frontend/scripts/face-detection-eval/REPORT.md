@@ -4,28 +4,25 @@ Issue: [#1222 — Test & measure accuracy of face count detection](https://githu
 
 ## Decision
 
-**Current accuracy is not acceptable for proctoring as configured today —**
-and it's worse than it first looked. An initial pass of this eval used WIDER
-FACE (a general face-detection benchmark: event photography, not webcam
-footage) and found a concerning but survivable `NO_FACE` precision of 0.342.
-Adding a second, webcam-realistic test set — 154 frames hand-labeled from the
-MSU Online Exam Proctoring dataset (real students, webcam mounted above the
-monitor, an actual exam session) — drops `NO_FACE` precision to **0.060** on
-that set alone. In plain terms: of every anomaly this model would have logged
-as "student left the frame" against real exam-webcam footage in this test
-set, **94% were wrong** — the student had a face in frame the whole time; the
-model just didn't find it, usually because they were looking down, wearing a
-cap, or resting a hand near their face — completely ordinary things a person
-does while taking an exam.
+**Current accuracy is not acceptable for proctoring as configured today.**
+On 211 frames of real exam-webcam footage (171 human-labeled from the MSU
+Online Exam Proctoring dataset, 20 external mask-condition frames, and 20
+synthetically-relit OEP frames — see [Methodology](#methodology)), `NO_FACE`
+precision is **0.044** — of every anomaly this model would log as "student
+left the frame," **95.6% are wrong**. The student had a face in frame the
+whole time; the model just didn't find it, usually because they were looking
+down, resting a hand near their face, wearing glasses, or wearing a mask —
+completely ordinary things a person does while taking an exam.
 
-| Source | n | `NO_FACE` precision | `NO_FACE` recall | `MULTIPLE_FACES` precision | `MULTIPLE_FACES` recall |
-| --- | --- | --- | --- | --- | --- |
-| WIDER FACE (event photography) | 272 | 0.342 | 0.975 | 0.821 | 0.582 |
-| **OEP (real exam webcam)** | **154** | **0.060** | 1.000 | 1.000 | 0.556 |
-| Combined | 426 | 0.238 | 0.977 | 0.857 | 0.575 |
+| Metric | Value |
+| --- | --- |
+| n | 211 |
+| Bucket accuracy (NO_FACE / OK / MULTIPLE_FACES) | 56.9% |
+| `NO_FACE` precision / recall / F1 | 0.044 / 1.000 / 0.084 |
+| `MULTIPLE_FACES` precision / recall / F1 | 1.000 / 0.600 / 0.750 |
 
-Recommendation unchanged in kind, stronger in urgency: do not ship `NO_FACE`
-as a single-frame hard pause/rewind trigger. See [Recommendations](#recommendations).
+Recommendation unchanged in kind: do not ship `NO_FACE` as a single-frame
+hard pause/rewind trigger. See [Recommendations](#recommendations).
 
 ## Methodology
 
@@ -56,17 +53,19 @@ same thing the production anomaly flags mean:
 | 1                     | none (OK)            |
 | 2+                    | `MULTIPLE_FACES`    |
 
-### Test set — 426 labeled frames (`labels.csv`)
+### Test set — 211 labeled frames (`labels.csv`)
 
-Two sources, built two different ways:
+**Real exam-webcam footage only.** An earlier pass of this eval also included
+WIDER FACE (general event photography — press conferences, sports, crowds)
+as a supplementary source. It was dropped: WIDER FACE isn't representative of
+the actual use case (a single person seated at a laptop, webcam mounted above
+the monitor), and mixing it in diluted the headline number — the WIDER-only
+`NO_FACE` precision (0.342) was substantially *less* alarming than the
+webcam-realistic number, which would have understated the real risk. Every
+frame in this test set now comes from one of two real, ground-truthed
+sources:
 
-**WIDER FACE (272 frames)** — real photos with **ground-truth face counts and
-per-face attributes** (blur, illumination, occlusion, pose) from the
-dataset's own annotations, used directly as condition tags; no manual
-labeling. General event photography, not webcam footage — this is why a
-second source was added.
-
-**MSU Online Exam Proctoring / "OEP" dataset (154 frames)** — real students
+**MSU Online Exam Proctoring / "OEP" dataset (171 frames)** — real students
 and actors actually taking an exam on camera, webcam mounted above the
 monitor: the actual use case. At ~11.8GB across 24 subjects it's too large to
 download and process locally, so it was handled as a two-phase Kaggle
@@ -75,143 +74,165 @@ pipeline (`kaggle/`):
 1. **Phase 1** (`kaggle/phase1_extract_candidates.ipynb`, run manually on
    Kaggle — the account used has Dataset API access but the Kernels API
    requires phone verification Kaggle hasn't granted it): mounts the dataset
-   directly in Kaggle's environment (nothing large downloaded locally),
-   decodes 13 subjects' webcam videos sequentially (prioritizing the 9 "real
-   exam" subjects, where the proctor actually walks up to and talks to the
-   student — the best real source of genuine multi-person frames), samples a
-   frame every 2.5s, and runs a quick Python MediaPipe pass **only** to flag
-   candidate rare frames (0-face / 2+-face) worth a human look. Output:
-   contact-sheet grids of labeled thumbnails (79 sheets, ~1955 candidates).
+   directly in Kaggle's environment, decodes 13 of 24 subjects' webcam videos
+   sequentially, samples a frame every 2.5s, and runs a quick Python
+   MediaPipe pass **only** to flag candidate rare frames (0-face / 2+-face)
+   worth a human look. Output: 1955 candidate frames, batched into 79
+   contact-sheet grids of labeled thumbnails.
 2. **Human review** (`kaggle/build-oep-labels.mjs` encodes the result): every
    0-face and 2+-face candidate sheet was reviewed by hand, plus a spread of
    the 1-face pool, and each frame's *actual* face count was recorded from
    what's visible in the image — not from what either detector guessed
-   (scoring a model against labels it produced itself would be circular, and
-   the OEP dataset's own `gt.txt` files turned out to label cheating-*behavior*
-   types — gaze, text, phone use — not face count, confirmed by decoding a
-   sample video). A frame only counts a face as present if facial features
-   (eyes/nose/mouth) are actually visible — a person's back or shoulder at
-   the frame edge doesn't count as a "face."
+   (scoring a model against labels it produced itself would be circular).
+   A frame only counts a face as present if facial features (eyes/nose/mouth)
+   are actually visible.
 
-Composition (both sources combined):
+All 13 sampled subjects are now represented — one (`subject1`) was initially
+skipped in favor of the 9 "real exam" subjects (where a proctor actually
+walks up and talks to the student, the richest source of genuine multi-person
+frames), then reviewed in a second pass via its own contact sheets. It
+contributed a clean single-face stretch, several hand-over-mouth/chin
+occlusion moments, downward reading-angle moments, and one genuine
+peer-present event (a second person, clearly visible, confirmed not a
+double-count artifact).
+
+**Mask (20 frames)** — a face-mask edge case has no real analogue anywhere in
+the 2017 OEP corpus (it predates mask-wearing as routine exam attire), so
+this is sourced separately: tightly-cropped single-face images from a public
+HF-hosted mirror of the Kaggle "Face Mask 12K Images" dataset
+(`build-dataset-mask.mjs`). Not WIDER FACE, not webcam footage — the closest
+available real, individually-fetchable, ground-truthed mask data.
+
+**Lighting (20 frames)** — same problem as mask: OEP's webcam corpus has
+consistent auto-exposure and contains no genuine poor-lighting frames
+(confirmed by a quantitative scan — Laplacian variance for blur, mean/contrast
+luminance for lighting extremity — over the 844 previously-unreviewed OEP
+candidate frames; the most extreme candidates by that scan were still
+visually normal, sharp, evenly-lit shots on manual check). A real external
+low-light face dataset (DARK FACE, CVPR 2019 UG2+ Challenge) was evaluated
+and rejected: it's outdoor nighttime crowd/surveillance photography
+(~8.4 faces/image on average) with no license listed, a worse representation
+of "webcam under poor lighting" than a synthetically degraded real webcam
+frame. So instead, `kaggle/build-synthetic-lighting.mjs` takes real,
+previously-unused single-face OEP frames and applies a controlled exposure
+transform (heavy underexposure or overexposure, `synthlight_dark_*` /
+`synthlight_bright_*`) — the face is genuinely there, ground truth is still
+1, only the lighting is synthetic. Labeled as such in `source_dataset` so
+it's never confused with a naturally-occurring case; see
+[Limitations](#limitations).
+
+Composition:
 
 | condition_tags | n | ground truth | source |
 | --- | --- | --- | --- |
-| normal | 105 | 1 face, clean/typical | both |
 | glasses | 50 | 1 face, wearing glasses | OEP |
-| peer_present | 73 | 2–4 faces | both |
-| angle | 36 | 1 face, atypical pose | both |
-| occlusion | 32 | 1 face, heavy occlusion | both |
+| normal | 43 | 1 face, clean/typical | OEP |
+| peer_present | 20 | 2 faces | OEP |
+| mask | 20 | 1 face, wearing a mask | external (HF mirror of Kaggle Face Mask 12K) |
+| lighting | 20 | 1 face, extreme illumination | OEP frame, synthetic exposure adjustment |
+| angle | 20 | 1 face, atypical pose | OEP |
 | occlusion;angle | 19 | 1 face, cap pulled low **and** chin tucked down | OEP |
-| background_crop | 40 | 0 faces (cropped from WIDER FACE, verified against its boxes) | WIDER |
-| mask | 20 | 1 face, wearing a mask | WIDER (external mask dataset) |
-| lighting | 20 | 1 face, extreme illumination | WIDER |
-| partial_occlusion | 15 | 1 face, partial occlusion | WIDER |
-| blur | 12 | 1 face, heavy blur | WIDER |
+| occlusion | 15 | 1 face, heavy occlusion | OEP |
 | absent | 4 | 0 faces, person stepped away from desk | OEP |
 
-Full provenance: `wider-selection.json`, `mask-selection.json`,
-`negatives-selection.json` (WIDER-derived) and `kaggle/results/candidate_manifest.csv`
-+ `kaggle/build-oep-labels.mjs` (OEP — every included frame's selection
-rationale is a code comment there). `labels.csv` is the canonical
-`frame_id, ground_truth_face_count, condition_tags` file the eval reads.
+Full provenance: `mask-selection.json` and `kaggle/results/candidate_manifest.csv`
++ `kaggle/build-oep-labels.mjs` / `kaggle/build-synthetic-lighting.mjs` (every
+included OEP frame's selection rationale is a code comment there).
+`labels.csv` is the canonical `frame_id, ground_truth_face_count,
+condition_tags` file the eval reads.
 
-Neither raw source (WIDER FACE's ~366MB archives, OEP's ~11.8GB video) is
-committed — only the 426 selected/derived frames (`frames/`, ~30MB total).
-See `README.md` and `kaggle/README.md` to regenerate either.
+The OEP source video (~11.8GB) and the mask dataset's own archive are not
+committed — only the 211 selected/derived frames (`frames/`) are. See
+`README.md` and `kaggle/README.md` to regenerate either.
 
 ## Results
 
-### Overall (n=426)
+### Overall (n=211)
 
 | Metric | Value |
 | --- | --- |
-| Bucket accuracy (NO_FACE / OK / MULTIPLE_FACES) | 61.5% |
-| `NO_FACE` precision / recall / F1 | 0.238 / 0.977 / 0.382 |
-| `MULTIPLE_FACES` precision / recall / F1 | 0.857 / 0.575 / 0.689 |
+| Bucket accuracy | 56.9% |
+| `NO_FACE` precision / recall / F1 | 0.044 / 1.000 / 0.084 |
+| `MULTIPLE_FACES` precision / recall / F1 | 1.000 / 0.600 / 0.750 |
 
 Confusion matrix (rows = ground truth, columns = predicted):
 
 | | → NO_FACE | → OK | → MULTIPLE_FACES |
 | --- | --- | --- | --- |
-| **NO_FACE** (n=44) | 43 | 1 | 0 |
-| **OK** (n=309) | 125 | 177 | 7 |
-| **MULTIPLE_FACES** (n=73) | 13 | 18 | 42 |
+| **NO_FACE** (n=4) | 4 | 0 | 0 |
+| **OK** (n=187) | 83 | 104 | 0 |
+| **MULTIPLE_FACES** (n=20) | 4 | 4 | 12 |
 
-### By source — this is the headline result
+`NO_FACE` recall is perfect (all 4 genuine absences caught) and precision is
+essentially a coin flip gone badly wrong: of 91 frames the model flagged
+`NO_FACE`, 87 had a real face in frame. `MULTIPLE_FACES` is the mirror image
+— when it fires it's always right (precision 1.000), but it misses 8 of 20
+genuine multi-person frames (recall 0.600).
 
-| Source | n | Bucket accuracy | `NO_FACE` P / R / F1 | `MULTIPLE_FACES` P / R / F1 |
-| --- | --- | --- | --- | --- |
-| WIDER FACE (event photography) | 272 | 64.3% | 0.342 / 0.975 / 0.506 | 0.821 / 0.582 / 0.681 |
-| **OEP (real exam webcam)** | **154** | **56.5%** | **0.060 / 1.00 / 0.113** | 1.00 / 0.556 / 0.714 |
+### By condition
 
-The general-photography benchmark *understated* how unreliable `NO_FACE` is
-in the actual use case. On real exam-webcam frames, `NO_FACE` precision is
-essentially a coin flip gone wrong — worse than random with respect to how
-often the flag is *right*, because it's dominated by ordinary in-exam
-behavior (looking down at the keyboard/paper, a hand near the chin, a cap)
-rather than the student actually leaving.
+| Condition | n | Bucket accuracy | False `NO_FACE` rate |
+| --- | --- | --- | --- |
+| absent (true 0-face) | 4 | 100.0% | 0.0% |
+| **lighting (synthetic exposure)** | **20** | **90.0%** | **10.0%** |
+| normal | 43 | 79.1% | 20.9% |
+| glasses | 50 | 70.0% | 30.0% |
+| peer_present (true 2+)¹ | 20 | 60.0% | 20.0% |
+| occlusion | 15 | 46.7% | 53.3% |
+| angle | 20 | 40.0% | 60.0% |
+| mask | 20 | 10.0% | 90.0% |
+| **occlusion;angle (cap + chin-down)** | **19** | **0.0%** | **100.0%** |
 
-### By condition (combined)
-
-| Condition | n | Bucket accuracy | False `NO_FACE` rate | False `MULTIPLE_FACES` rate |
-| --- | --- | --- | --- | --- |
-| absent (true 0-face, OEP) | 4 | 100.0% | 0.0% | 0.0% |
-| background_crop (true 0-face, WIDER) | 40 | 97.5% | 0.0% | 0.0% |
-| normal | 105 | 85.7% | 11.4% | 2.9% |
-| lighting | 20 | 75.0% | 15.0% | 10.0% |
-| glasses | 50 | 70.0% | 30.0% | 0.0% |
-| peer_present (true 2+) | 73 | 57.5% | 17.8%¹ | — |
-| angle | 36 | 44.4% | 55.6% | 0.0% |
-| occlusion | 32 | 34.4% | 65.6% | 0.0% |
-| partial_occlusion | 15 | 33.3% | 60.0% | 6.7% |
-| blur | 12 | 25.0% | 66.7% | 8.3% |
-| mask | 20 | 10.0% | 90.0% | 0.0% |
-| **occlusion;angle (cap + chin-down, OEP)** | **19** | **0.0%** | **100.0%** | 0.0% |
+`lighting` stands out: the model is far more robust to exposure extremes
+(90% accuracy, only 2/20 missed) than to anything that obscures the lower
+face. Read this alongside [Limitations](#limitations) — it's a synthetic
+stress test on real faces, not naturally-occurring poor lighting, so treat it
+as evidence the detector's failure mode is specifically face-occlusion, not
+general image-quality degradation, rather than a literal "poor lighting is
+fine in production" claim.
 
 ¹ For `peer_present`, "false `NO_FACE` rate" counts 2+-face frames the model
-collapsed all the way down to 0 detections, not just undercounted.
+collapsed all the way down to 0 detections, not just undercounted (the
+remaining 8/20 undercounted to exactly 1, not 0).
 
-Both true-0-face conditions (`absent`, `background_crop`) score near-perfect
-— the model is not trigger-happy about seeing faces that aren't there. Every
-failure mode is a **miss**, not a hallucination. The worst real-webcam
-condition, `occlusion;angle` (one subject's cap-pulled-low-plus-chin-down
-posture, sustained for nearly their entire ~15-minute session), missed
-**every single frame**.
+Both true-0-face conditions score near-perfect (`absent` 100%) — the model is
+not trigger-happy about seeing faces that aren't there. Every failure mode is
+a **miss**, not a hallucination. The worst condition, `occlusion;angle`
+(cap-pulled-low-plus-chin-down posture, sustained for nearly one subject's
+entire ~15-minute session), missed **every single frame**.
 
-Raw per-frame predictions, the full misclassification list, and a per-source
-breakdown are in `results.json`.
+Raw per-frame predictions and the full misclassification list are in
+`results.json`.
 
 ## Root cause
 
 `NO_FACE` failures cluster exactly where a single-shot, no-tracking detector
 would be expected to struggle: anything that hides the lower face (masks,
-occlusion, a downward head tilt that puts the chin near the chest) or
-degrades edge/contrast cues (blur, extreme lighting) pushes the detector's
-internal confidence below its acceptance threshold on that one frame, and it
-returns *zero* detections rather than a low-confidence one — no partial
-credit. The OEP data shows this is not an edge case: looking down at a
-keyboard or exam paper, or resting a hand near the chin, are things real
-students do constantly, not rare conditions.
+occlusion, a downward head tilt that puts the chin near the chest) pushes the
+detector's internal confidence below its acceptance threshold on that one
+frame, and it returns *zero* detections rather than a low-confidence one — no
+partial credit. Looking down at a keyboard or exam paper, resting a hand near
+the chin, or wearing glasses are things real students do constantly, not rare
+conditions — and `mask` (90% false `NO_FACE` rate) shows the same pattern
+against an even more common face-covering.
 
-`MULTIPLE_FACES` recall (0.575 combined) fails the same way in reverse: a
-second, harder-to-see face (partially out of frame, small, poor angle)
-doesn't get detected, so the frame reads as 1 face instead of 2. Precision is
-strong (0.857) — when it *does* fire, it's usually right.
+`MULTIPLE_FACES` recall (0.600) fails the same way in reverse: a second,
+harder-to-see face (partially out of frame, small, poor angle) doesn't get
+detected, so the frame reads as 1 face instead of 2. Precision is perfect
+(1.000) — when it *does* fire, it's always right.
 
-**A cross-implementation finding surfaced during OEP labeling, worth flagging
-explicitly:** the Python `mediapipe.solutions.face_detection` pass used on
-Kaggle to help find review candidates (same nominal model — BlazeFace
-full-range — different language runtime than production) persistently
-double-counted several individuals as 2 faces where there was only 1 (one
-subject: 222 of ~360 sampled frames). The production TFJS/WASM pipeline this
-report actually evaluates does **not** reproduce that failure on those same
-frames — instead it misses ~30% of them as `NO_FACE` (see `glasses`
-condition above). Two runtimes of "the same" model disagree, on the same
-input, about *how* they fail. Practical implication: accuracy characteristics
-measured against one runtime/language binding of a model should not be
-assumed to transfer to a different binding of the "same" model — re-test
-after any such swap.
+**A cross-implementation finding, worth flagging explicitly:** the Python
+`mediapipe.solutions.face_detection` pass used on Kaggle to help find review
+candidates (same nominal model — BlazeFace full-range — different language
+runtime than production) persistently double-counted several individuals as
+2 faces where there was only 1 (one subject: 222 of ~360 sampled frames). The
+production TFJS/WASM pipeline this report actually evaluates does **not**
+reproduce that failure on those same frames — instead it misses ~30% of them
+as `NO_FACE` (see `glasses` condition above). Two runtimes of "the same"
+model disagree, on the same input, about *how* they fail. Practical
+implication: accuracy characteristics measured against one runtime/language
+binding of a model should not be assumed to transfer to a different binding
+of the "same" model — re-test after any such swap.
 
 This all matters more because production reports an anomaly from a **single
 frame** (`floating-video.tsx`, `handleImageAnomaly`) with no multi-frame
@@ -257,10 +278,10 @@ Options to actually get confidence scores, for a future issue if useful:
    `floating-video.tsx`'s throttle) before reporting would filter out
    single-frame misses while still catching a student who is genuinely gone.
 2. **Do not pause/rewind on `MULTIPLE_FACES` from a single frame either** —
-   0.575 recall means real peer-present cases are already under-caught; a
-   single well-detected frame is reasonably trustworthy evidence (0.857
-   precision) and is the right trigger for *logging*, but a stricter
-   confirmation window makes sense before an automatic pause.
+   0.600 recall means real peer-present cases are already under-caught; a
+   single well-detected frame is fully trustworthy evidence (1.000 precision)
+   and is the right trigger for *logging*, but a stricter confirmation window
+   makes sense before an automatic pause.
 3. **Don't rely on model confidence for threshold tuning** — it isn't
    available from this model. Tune on detection *count stability* across
    consecutive frames instead (recommendation 1).
@@ -278,18 +299,42 @@ Options to actually get confidence scores, for a future issue if useful:
   weights and the same code path the browser falls back to when WebGL is
   unavailable (`FaceDetectorWorker.ts`); this does not change *what* the
   model does, only inference speed.
-- WIDER FACE is general event photography, not webcam footage — that's why
-  the OEP set was added. It remains useful as a cross-check with richer
-  per-face attribute ground truth than could be hand-labeled at this scale.
+- **n=211 is just above this issue's ~200–300 frame target range.**
+- **`lighting` is synthetic, not naturally-occurring poor lighting.** OEP's
+  webcam corpus has consistent auto-exposure and contains no genuine
+  poor-lighting frames — confirmed by a quantitative scan (Laplacian variance
+  for blur, mean/contrast luminance for lighting extremity) over the 844
+  previously-unreviewed OEP candidate frames, whose most extreme candidates
+  were still visually normal on manual check. A real external low-light
+  dataset (DARK FACE) was evaluated and rejected — outdoor nighttime
+  crowd/surveillance photos, ~8.4 faces/image, no license listed — a worse
+  representation of "webcam under poor lighting" than a synthetically
+  degraded real webcam frame. So `lighting` frames here are real OEP faces
+  with a controlled exposure transform applied
+  (`kaggle/build-synthetic-lighting.mjs`) rather than naturally-occurring
+  cases. The 90% accuracy on this condition should be read as "the detector
+  tolerates exposure extremes on this specific transform," not as a general
+  claim about production behavior under real poor lighting.
+- **`blur` has no representation at all** — unlike `lighting`, this was never
+  a required edge case in the issue (its explicit list is masks, partial
+  occlusion, side angles, poor lighting, virtual camera), and the same scan
+  that ruled out natural blur examples in OEP means it would need its own
+  synthetic or external treatment if ever prioritized.
 - OEP frames are drawn from 13 of the dataset's 24 subjects, sampled every
-  2.5s and capped at 15 minutes/video, so some rare conditions (e.g. genuine
-  multi-person moments) are necessarily a small absolute count (n=73 across
-  both sources) even though real. The Kaggle account's phone-unverified
-  status meant the extraction notebook had to be run manually rather than
-  pushed via API — see `kaggle/README.md` for exactly what was and wasn't
-  reviewed (79 contact sheets covering ~1955 auto-flagged candidates; every
-  0-face and 2+-face candidate was reviewed, plus a spread of the 1-face
-  pool).
+  2.5s and capped at 15 min/video, so some rare conditions (e.g. genuine
+  multi-person moments) are necessarily a small absolute count (n=20) even
+  though real. The Kaggle account's phone-unverified status meant the
+  extraction notebook had to be run manually rather than pushed via API —
+  see `kaggle/README.md` for exactly what was and wasn't reviewed. A large
+  additional pool (~1780 further candidate frames across the same 13
+  subjects, plus 11 entirely unsampled subjects) exists if the raw candidate
+  dump is available locally — see `kaggle/README.md`.
+- `absent` (true 0-face) sits at n=4 and is unlikely to grow much further from
+  this pool: essentially all of the pool's 0-face-predicted candidates were
+  already reviewed, and the great majority turned out to be occlusion/angle
+  misses (a face present but undetected), not genuine departures — itself a
+  real finding about how rarely students fully leave frame during a recorded
+  exam.
 - The `mask` condition uses tightly-cropped face images (a mask-classification
   dataset), not full webcam-style scenes with background — the closest
   available real, individually-fetchable, ground-truthed mask data.
