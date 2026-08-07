@@ -14,7 +14,7 @@ export function writeCsv(filePath, header, rows) {
 }
 
 export function readCsv(filePath) {
-  const text = fs.readFileSync(filePath, "utf8").trim();
+  const text = fs.readFileSync(filePath, "utf8").replace(/\r\n/g, "\n").trim();
   if (!text) return [];
   const [headerLine, ...lines] = text.split("\n");
   const header = headerLine.split(",");
