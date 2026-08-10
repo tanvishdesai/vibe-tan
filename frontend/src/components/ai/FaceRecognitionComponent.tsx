@@ -140,7 +140,7 @@ const FaceRecognitionComponent: React.FC<FaceRecognitionComponentProps> = ({
     });
   }, [videoRef]);
 
-  const reportMismatch = useCallback(async () => {
+  const reportMismatch = useCallback(async (distance: number) => {
     const course = courseStore.currentCourse;
     if (!course?.courseId || !course?.versionId || !course?.itemId) {
       return;
@@ -157,6 +157,7 @@ const FaceRecognitionComponent: React.FC<FaceRecognitionComponentProps> = ({
         courseId: course.courseId,
         versionId: course.versionId,
         itemId: course.itemId,
+        matchDistance: distance,
       },
       file,
     });
@@ -335,7 +336,7 @@ const FaceRecognitionComponent: React.FC<FaceRecognitionComponentProps> = ({
           hasConfirmedMismatch = true;
 
           if (!mismatchReportedRef.current) {
-            await reportMismatch();
+            await reportMismatch(distance);
             mismatchReportedRef.current = true;
             console.log('[FaceRecognitionDebug] anomaly sent', { distance });
           }

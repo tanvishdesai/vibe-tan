@@ -3,9 +3,12 @@ import {
   IsEnum,
   IsMongoId,
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsString,
+  Min,
 } from 'class-validator';
+import {Type} from 'class-transformer';
 import {JSONSchema} from 'class-validator-jsonschema';
 // Import directly from the defining transformer rather than the module barrel
 // to avoid a circular dependency (the barrel re-exports controllers that pull
@@ -61,6 +64,17 @@ export class NewAnomalyData {
   @IsMongoId()
   @IsString()
   cohortId?: string | ObjectId;
+
+  @JSONSchema({
+    description:
+      'Euclidean distance between the live face embedding and the stored reference embedding (FACE_RECOGNITION anomalies only)',
+    type: 'number',
+  })
+  @IsOptional()
+  @Type(() => Number)
+  @IsNumber()
+  @Min(0)
+  matchDistance?: number;
 }
 
 export class AnomalyData extends NewAnomalyData implements IAnomalyData {

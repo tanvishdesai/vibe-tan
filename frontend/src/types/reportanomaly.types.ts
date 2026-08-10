@@ -23,6 +23,8 @@ export interface NewAnomalyData {
   versionId: string;
   itemId: string;
   cohortId?: string;
+  /** Euclidean distance between the live face embedding and the stored reference embedding (FACE_RECOGNITION anomalies only) */
+  matchDistance?: number;
 }
 
 export interface AnomalyData extends NewAnomalyData {
